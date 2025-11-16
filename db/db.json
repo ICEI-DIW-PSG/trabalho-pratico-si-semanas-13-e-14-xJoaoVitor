@@ -1,18 +1,122 @@
 {
-  "usuarios": [
+  "eventos": [
     {
-      "id": "187cb7e5-e097-4224-8bc7-b610c855e2b1",
-      "login": "admin",
-      "senha": "123",
-      "nome": "Administrador do Sistema",
-      "email": "admin@abc.com"
+      "id": "1",
+      "titulo": "Culto de Domingo",
+      "data": "Todos os domingos.",
+      "descricaoCurta": "Participe conosco do nosso culto principal da semana e adore ao Senhor em comunhão com toda a igreja.",
+      "descricaoLonga": "O Culto de Domingo é um tempo especial de adoração, ensino da Palavra e comunhão entre os irmãos. É o momento em que toda a igreja se reúne para louvar a Deus, fortalecer a fé e crescer espiritualmente. Traga sua família, amigos e vizinhos e venha celebrar conosco a presença do Senhor em mais uma semana abençoada.",
+      "imagem": "img/igreja.jpg",
+      "horario": "19:00",
+      "local": "Igreja Betesda",
+      "fotosDetalhes": [
+        "img/galeria/culto1.jpg",
+        "img/galeria/culto2.jpg",
+        "img/galeria/culto3.jpg",
+        "img/galeria/culto4.jpg"
+      ]
     },
     {
-      "id": "ec37c83d-4b7f-458d-9e10-3fda7d37cd3e",
-      "login": "user",
-      "senha": "123",
-      "nome": "Usuario Comum",
-      "email": "user@abc.com"
+      "id": "2",
+      "titulo": "Batismo nas Águas",
+      "data": "15 de Novembro de 2025",
+      "descricaoCurta": "Celebre conosco este momento de pública confissão de fé e nova vida em Cristo.",
+      "descricaoLonga": "O batismo é um passo fundamental na jornada cristã, simbolizando a morte para o pecado e a ressurreição para uma nova vida em Jesus. Será um dia de grande festa e celebração. Se você deseja ser batizado, entre em contato com a liderança da igreja.",
+      "imagem": "img/batismo.jpg",
+      "horario": "09:00",
+      "local": "Sítio da Volta",
+      "fotosDetalhes": [
+        "img/galeria/batismo1.jpg",
+        "img/galeria/batismo2.jpg",
+        "img/galeria/batismo3.jpg",
+        "img/galeria/batismo4.jpg"
+      ]
+    },
+    {
+      "id": "3",
+      "titulo": "Culto de Jovens (Juventude Oásis)",
+      "data": "Todos os sábados.",
+      "descricaoCurta": "Uma noite vibrante de louvor, palavra e comunhão para a juventude que busca viver intensamente em Cristo.",
+      "descricaoLonga": "O Culto de Jovens é um encontro dinâmico e inspirador, feito especialmente para a nova geração que deseja seguir a Jesus com paixão e propósito. Com louvor contagiante, palavra edificante e um ambiente de amizade sincera, é o momento ideal para crescer na fé e se conectar com outros jovens comprometidos com o Reino de Deus.",
+      "imagem": "img/jovens.jpg",
+      "horario": "19:30",
+      "local": "Igreja Betesda",
+      "fotosDetalhes": [
+        "img/galeria/jovens1.jpg",
+        "img/galeria/jovens2.jpg",
+        "img/galeria/jovens3.jpg",
+        "img/galeria/jovens4.jpg"
+      ]
+    },
+    {
+      "id": "4",
+      "titulo": "Culto de Crianças",
+      "data": "Todos os sábados.",
+      "descricaoCurta": "Um culto especial preparado para nossas crianças aprenderem sobre Jesus de forma divertida e inspiradora.",
+      "descricaoLonga": "O Culto de Crianças é um momento dedicado especialmente aos pequenos, com louvores, histórias bíblicas e atividades criativas que ensinam sobre o amor de Deus. Nossa equipe prepara cada detalhe com carinho para que as crianças cresçam na fé de maneira alegre e significativa. Traga seus filhos, netos, sobrinhos e venha celebrar conosco este tempo de adoração e aprendizado!",
+      "imagem": "img/criancas.jpg",
+      "horario": "14:00",
+      "local": "Igreja Betesda",
+      "fotosDetalhes": [
+        "img/galeria/criancas1.jpg",
+        "img/galeria/criancas2.jpg",
+        "img/galeria/criancas3.jpg",
+        "img/galeria/criancas4.jpg"
+      ]
+    },
+    {
+      "id": "5",
+      "titulo": "Culto de Homens",
+      "data": "Todas as sexta-feiras.",
+      "descricaoCurta": "Um tempo de fortalecimento espiritual e comunhão entre homens comprometidos com Deus e suas famílias.",
+      "descricaoLonga": "O Culto de Homens é uma oportunidade para que os homens se unam em oração, louvor e aprendizado da palavra. Um encontro voltado para o crescimento pessoal e espiritual, buscando formar líderes fortes, tementes a Deus e preparados para servir no lar, na igreja e na sociedade.",
+      "imagem": "img/homens.jpg",
+      "horario": "20:00",
+      "local": "Igreja Betesda",
+      "fotosDetalhes": [
+        "img/galeria/homens1.jpg",
+        "img/galeria/homens2.jpg",
+        "img/galeria/homens3.jpg",
+        "img/galeria/homens4.jpg"
+      ]
+    },
+    {
+      "id": "6",
+      "titulo": "Culto de Mulheres",
+      "data": "Todas as terça-feiras.",
+      "descricaoCurta": "Um encontro de fé, adoração e encorajamento preparado especialmente para as mulheres.",
+      "descricaoLonga": "O Culto de Mulheres é um momento de comunhão e crescimento espiritual, onde mulheres de todas as idades se reúnem para adorar a Deus e ouvir mensagens inspiradoras. É um espaço para fortalecer a fé, compartilhar experiências e ser edificada por meio da palavra e da oração. Venha viver um tempo precioso na presença do Senhor!",
+      "imagem": "img/mulheres.jpg",
+      "horario": "20:00",
+      "local": "Igreja Betesda",
+      "fotosDetalhes": [
+        "img/galeria/mulheres1.jpg",
+        "img/galeria/mulheres2.jpg",
+        "img/galeria/mulheres3.jpg",
+        "img/galeria/mulheres4.jpg"
+      ]
+    },
+    {
+      "id": 7,
+      "titulo": "Jantar de Casais",
+      "data": "13 de Dezembro de 2025",
+      "descricaoCurta": "Uma noite especial de comunhão e edificação para casais, com momentos de amor, fé e companheirismo.",
+      "descricaoLonga": "O Jantar de Casais é uma oportunidade única para fortalecer laços matrimoniais à luz da palavra de Deus. Em um ambiente agradável e acolhedor, teremos momentos de reflexão, dinâmicas e uma deliciosa refeição preparada com carinho. Um tempo para renovar o amor e aprender mais sobre o propósito de Deus para o casamento.",
+      "imagem": "img/casais.jpg",
+      "horario": "20:00",
+      "local": "Igreja Betesda",
+      "fotosDetalhes": ["img/galeria/casais1.jpg", "img/galeria/casais2.jpg", "img/galeria/casais3.jpg", "img/galeria/casais4.jpg"]
+    },
+    {
+      "id": 8,
+      "titulo": "Gincana",
+      "data": "Todos os sábados, durante o Culto de Jovens.",
+      "descricaoCurta": "Uma gincana divertida e solidária liderada pelos jovens, com o objetivo de arrecadar fundos para a construção da salinha das crianças.",
+      "descricaoLonga": "A gincana é um evento alegre e participativo, aberto a toda a igreja, promovido pelo grupo de jovens. Além de muita diversão, desafios e integração entre os participantes, o objetivo é arrecadar recursos para a construção da salinha das crianças. Participe e contribua com essa causa especial, unindo lazer e propósito em um evento muito divertido.",
+      "imagem": "img/gincana.jpg",
+      "horario": "19:30",
+      "local": "Igreja Betesda",
+      "fotosDetalhes": ["img/galeria/gincana1.jpg", "img/galeria/gincana2.jpg", "img/galeria/gincana3.jpg", "img/galeria/gincana4.jpg"]
     }
   ]
 }

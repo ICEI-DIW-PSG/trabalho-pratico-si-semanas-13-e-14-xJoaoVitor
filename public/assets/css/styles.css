@@ -1,0 +1,175 @@
+:root {
+    --cor-vermelha: #c21a1a;
+    --cor-amarela: #ffde00; 
+    --cor-azul: #1a4da0;   
+    --cor-roxa: #6a0dad; 
+    --cor-texto: #333;
+    --cor-fundo: #f8f9fa;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+/* Estilos do Cabeçalho (Navbar) */
+.cabecalho {
+    padding: 0; 
+}
+
+.nome {
+    margin: 0;
+    font-size: 1.5rem;
+    color: var(--cor-azul);
+    font-weight: bold;
+}
+
+.logo {
+    height: 40px;
+}
+
+.navbar-nav .nav-link {
+    text-decoration: none;
+    color: var(--cor-roxa);
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: var(--cor-roxa);
+    color: white;
+}
+
+h2 {
+    color: var(--cor-azul);
+    font-size: 2.5em;
+}
+
+/* Carrosel */
+.carousel-item img {
+    height: 60vh; 
+    object-fit: cover;
+    filter: brightness(0.5);
+}
+
+.card-title {
+    color: var(--cor-vermelha);
+    margin-top: 0;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Botão Veja Mais - Cards */
+.btn-veja-mais {
+    background-color: var(--cor-vermelha);
+    border-color: var(--cor-vermelha);
+    color: white;
+    transition: background-color 0.3s, border-color 0.3s;
+    margin-top: auto !important; /* Manter o Veja Mais no Final do Texto */
+    margin-bottom: 0; 
+}
+
+.btn-veja-mais:hover {
+    background-color: #a01515;
+    border-color: #a01515;
+    color: white;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Página de Detalhes */
+.detalhe-img {
+    max-height: 500px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+.detalhe-titulo {
+    color: var(--cor-azul);
+    font-weight: bold;
+}
+
+.detalhe-info p {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.btn-voltar {
+    background-color: var(--cor-roxa);
+    color: white;
+    transition: background-color 0.3s;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    text-decoration: none;
+}
+
+.btn-voltar:hover {
+    background-color: #520a86;
+    color: white;
+}
+
+/* Autoria */
+.titulo-secao-autoria {
+    color: #333; 
+    font-size: 1.8em;
+    font-weight: 500;
+    border-bottom: 1px solid #ccc; 
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+.col-lg-8{
+    font-size: 1.4em;
+    text-align: justify;
+}
+
+.autoria-bloco {
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #ffffff;
+}
+
+.autoria-bloco h4 {
+    color: var(--cor-azul);
+    font-weight: bold;
+}
+
+.autoria-foto {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--cor-azul);
+}
+
+.autoria-info p {
+    margin-bottom: 0.3rem;
+    font-size: 0.9rem;
+}
+
+.autoria-redes p {
+    font-size: 0.9rem;
+}
+
+/* Fotos da Galeria */
+#galeria-fotos img {
+    width: 100%;
+    height: 300px; 
+    object-fit: cover; 
+    border: 4px solid var(--cor-amarela); 
+}
