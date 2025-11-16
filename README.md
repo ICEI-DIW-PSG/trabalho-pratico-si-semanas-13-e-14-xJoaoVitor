@@ -9,14 +9,14 @@ Sugerimos o uso das seguintes ferramentas acessíveis: [FullCalendar](https://fu
 
 ## Informações do trabalho
 
-- Nome:
-- Matricula:
-- Proposta de projeto escolhida:
-- Breve descrição sobre seu projeto:
+- Nome: João Vítor Rodrigues da Silva
+- Matricula: 905416
+- Proposta de projeto escolhida: Igreja
+- Breve descrição sobre seu projeto: Site para a igreja onde eu congrego.
 
 **Print da tela com a implementação**
 
-<< Coloque aqui uma breve explicação da implementação feita nessa etapa>>
+<< Foi implementada uma funcionalidade que mostra o calendário dos eventos. >>
 
 <<  COLOQUE A IMAGEM TELA 1 AQUI >>
 
