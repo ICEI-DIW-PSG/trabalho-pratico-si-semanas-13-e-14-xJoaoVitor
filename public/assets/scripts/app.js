@@ -259,7 +259,78 @@ async function updateEvento(id, eventoData) {
     }
 }
 
+// Função de calendário - mapa para converter meses em números
+const mesMap = {
+    'janeiro': '01', 'fevereiro': '02', 'março': '03', 'abril': '04',
+    'maio': '05', 'junho': '06', 'julho': '07', 'agosto': '08',
+    'setembro': '09', 'outubro': '10', 'novembro': '11', 'dezembro': '12'
+};
 
+function parsearDataEvento(dataStr) {
+    const str = dataStr.toLowerCase();
+
+    // Verifica a recorrência (dias da semana)
+    if (str.includes('domingo')) return { daysOfWeek: [0] }; // 0 = Domingo
+    if (str.includes('segunda')) return { daysOfWeek: [1] };
+    if (str.includes('terça')) return { daysOfWeek: [2] };
+    if (str.includes('quarta')) return { daysOfWeek: [3] };
+    if (str.includes('quinta')) return { daysOfWeek: [4] };
+    if (str.includes('sexta')) return { daysOfWeek: [5] };
+    if (str.includes('sábado')) return { daysOfWeek: [6] };
+
+    // Verifica data específica
+    const parts = str.split(' de ');
+    if (parts.length === 3) {
+        const dia = parts[0].padStart(2, '0');
+        const mes = mesMap[parts[1]];
+        const ano = parts[2];
+        
+        if (dia && mes && ano) {
+            return { start: `${ano}-${mes}-${dia}` };
+        }
+    }
+
+    // Retorna vazio se não conseguir identificar
+    return {};
+}
+
+// Inicializa o calendário
+async function montarCalendario() {
+    const calendarioEl = document.getElementById('calendario');
+    if (!calendarioEl) return;
+
+    const eventosApi = await getEventos();
+
+    const eventosFormatados = eventosApi.map(evento => {
+        const dataFormatada = parsearDataEvento(evento.data);
+        return {
+            title: evento.titulo,
+            url: `detalhe.html?id=${evento.id}`,
+            ...dataFormatada
+        };
+    });
+
+    const calendar = new FullCalendar.Calendar(calendarioEl, {
+        initialView: 'dayGridMonth', 
+        locale: 'pt-br',
+        headerToolbar: {
+            left: 'prev,next today',
+            center: 'title',
+            right: 'dayGridMonth,timeGridWeek,listWeek'
+        },
+        buttonText: { 
+            today: 'Hoje',
+            month: 'Mês',
+            week: 'Semana',
+            list: 'Lista'
+        },
+        events: eventosFormatados,
+        eventClick: function(info) {
+        }
+    });
+
+    calendar.render();
+}
 
 document.addEventListener('DOMContentLoaded', () => {
     if (document.getElementById('detalhe-container')) {
@@ -268,6 +339,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (document.getElementById('eventos-container')) {
         montarCarrossel();
         montarCardsEventos();
+        montarCalendario();
     }
     if (document.getElementById('form-evento')) {
         initCadastroPage();
