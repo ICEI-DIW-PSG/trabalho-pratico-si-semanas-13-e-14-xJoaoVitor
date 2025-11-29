@@ -188,52 +188,50 @@ h2 {
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
-.fc-toolbar-title {
+.fc-toolbar h2 {
     color: var(--cor-azul);
     font-size: 1.8em !important;
+    text-transform: capitalize;
 }
 
-.fc .fc-button-primary {
+.fc-button-group .fc-button {
     background-color: var(--cor-roxa);
     border-color: var(--cor-roxa);
+    color: white;
+    text-shadow: none;
+    background-image: none; 
+    box-shadow: none;
 }
 
-.fc .fc-button-primary:hover,
-.fc .fc-button-primary:active {
+.fc-button-group .fc-button:hover,
+.fc-button-group .fc-button:active,
+.fc-button-group .fc-button.fc-state-active {
     background-color: #520a86;
     border-color: #520a86;
+    color: white;
 }
 
-.fc .fc-button-primary:disabled {
+.fc-button-group .fc-button:disabled {
     background-color: var(--cor-azul);
     border-color: var(--cor-azul);
+    opacity: 0.6;
 }
 
-.fc-event {
-    border: 1px solid var(--cor-azul);
+.fc-event, .fc-event-dot {
     background-color: var(--cor-azul);
+    border-color: var(--cor-azul);
+    color: white !important; 
     font-weight: bold;
-    padding: 3px;
+    padding: 2px;
     font-size: 0.9em;
+    cursor: pointer;
 }
 
-.fc-daygrid-event,
-.fc-list-event {
-    background-color: var(--cor-azul);
-    border-color: var(--cor-azul);
-}
-
-.fc-daygrid-event:hover,
-.fc-list-event:hover {
+.fc-event:hover {
      background-color: var(--cor-roxa);
      border-color: var(--cor-roxa);
-     cursor: pointer;
 }
 
-.fc-event-title {
-    color: white !important;
-}
-
-.fc-day-today {
+.fc-today {
     background-color: #fffbef !important;
 }

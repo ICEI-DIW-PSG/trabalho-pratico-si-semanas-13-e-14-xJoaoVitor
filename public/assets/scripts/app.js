@@ -259,7 +259,7 @@ async function updateEvento(id, eventoData) {
     }
 }
 
-// Função de calendário - mapa para converter meses em números
+// Função de Calendário - Mapa Para Converter Meses em Números
 const mesMap = {
     'janeiro': '01', 'fevereiro': '02', 'março': '03', 'abril': '04',
     'maio': '05', 'junho': '06', 'julho': '07', 'agosto': '08',
@@ -269,16 +269,15 @@ const mesMap = {
 function parsearDataEvento(dataStr) {
     const str = dataStr.toLowerCase();
 
-    // Verifica a recorrência (dias da semana)
-    if (str.includes('domingo')) return { daysOfWeek: [0] }; // 0 = Domingo
-    if (str.includes('segunda')) return { daysOfWeek: [1] };
-    if (str.includes('terça')) return { daysOfWeek: [2] };
-    if (str.includes('quarta')) return { daysOfWeek: [3] };
-    if (str.includes('quinta')) return { daysOfWeek: [4] };
-    if (str.includes('sexta')) return { daysOfWeek: [5] };
-    if (str.includes('sábado')) return { daysOfWeek: [6] };
+    if (str.includes('domingo')) return { dow: [0] }; 
+    if (str.includes('segunda')) return { dow: [1] };
+    if (str.includes('terça')) return { dow: [2] };
+    if (str.includes('quarta')) return { dow: [3] };
+    if (str.includes('quinta')) return { dow: [4] };
+    if (str.includes('sexta')) return { dow: [5] };
+    if (str.includes('sábado')) return { dow: [6] };
 
-    // Verifica data específica
+    // Verifica Data Específica
     const parts = str.split(' de ');
     if (parts.length === 3) {
         const dia = parts[0].padStart(2, '0');
@@ -289,15 +288,13 @@ function parsearDataEvento(dataStr) {
             return { start: `${ano}-${mes}-${dia}` };
         }
     }
-
-    // Retorna vazio se não conseguir identificar
     return {};
 }
 
-// Inicializa o calendário
+// Inicialização do Calendário
 async function montarCalendario() {
-    const calendarioEl = document.getElementById('calendario');
-    if (!calendarioEl) return;
+    const calendarioEl = $('#calendario');
+    if (!calendarioEl.length) return;
 
     const eventosApi = await getEventos();
 
@@ -310,26 +307,28 @@ async function montarCalendario() {
         };
     });
 
-    const calendar = new FullCalendar.Calendar(calendarioEl, {
-        initialView: 'dayGridMonth', 
-        locale: 'pt-br',
-        headerToolbar: {
+    calendarioEl.fullCalendar({
+        header: { 
             left: 'prev,next today',
             center: 'title',
-            right: 'dayGridMonth,timeGridWeek,listWeek'
+            right: 'month,basicWeek,listWeek' 
         },
-        buttonText: { 
+        defaultView: 'month',
+        locale: 'pt-br',
+        buttonText: {
             today: 'Hoje',
             month: 'Mês',
             week: 'Semana',
             list: 'Lista'
         },
         events: eventosFormatados,
-        eventClick: function(info) {
+        eventClick: function(event) {
+            if (event.url) {
+                window.location.href = event.url;
+                return false;
+            }
         }
     });
-
-    calendar.render();
 }
 
 document.addEventListener('DOMContentLoaded', () => {
