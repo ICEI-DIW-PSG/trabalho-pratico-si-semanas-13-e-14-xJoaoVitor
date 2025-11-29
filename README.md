@@ -16,8 +16,10 @@ Sugerimos o uso das seguintes ferramentas acessíveis: [FullCalendar](https://fu
 
 **Print da tela com a implementação**
 
-<< Foi implementada uma funcionalidade que mostra o calendário dos eventos. >>
+<< Foi implementada uma seção na página principal que mostra o calendário dos eventos. >>
 
 <<  COLOQUE A IMAGEM TELA 1 AQUI >>
+![Print 1](print1.jpg)
 
 <<  COLOQUE A IMAGEM TELA 2 AQUI >>
+![Print 2](print2.jpg)
